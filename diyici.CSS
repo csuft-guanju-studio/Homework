@@ -1,0 +1,39 @@
+* {
+    background-attachment: fixed;
+    background-image: url(image/diss.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    margin: 30px auto;
+    width: 400px;
+}
+
+#jilu {
+    width: 100%;
+    height: 30px;
+    text-indent: 1em;
+}
+
+#list {
+    list-style: none;
+    font-size: 14px;
+}
+
+#list li {
+    text-indent: 14px;
+    background: #ccc;
+    line-height: 30px;
+    border: 1px solid #666;
+    border-top: none;
+}
+
+#list li span {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
