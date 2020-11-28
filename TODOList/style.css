@@ -1,0 +1,259 @@
+* {
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+
+h1 {
+	font-weight: 400;
+}
+
+li {
+	list-style: none;
+}
+
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.bgimg {
+	z-index: 5;
+	height: 85vh;
+	width: 100%;
+	background-image: url(images/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 48px;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+	background-color: #252526;
+	height: 185vh;
+}
+
+.nav a {
+	display: block;
+	text-align: center;
+}
+
+
+.nav a img {
+	height: 100px;
+	width: 100px;
+}
+
+/* 消除浮动 */
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clear {
+	*zoom: 1;
+}
+
+/* head */
+.head {
+	z-index: 10;
+	position: sticky;
+	top: 0;
+	height: 100px;
+	background-color: #323233;
+	margin-top: 1px;
+}
+
+.head .title h3 {
+	float: left;
+	margin: 0 50px;
+	font-size: 40px;
+	color: #ffffff;
+	line-height: 100px;
+}
+
+.head .creat-new-list {
+	position: absolute;
+	left: 50%;
+	width: 400px;
+	margin: 30px;
+	margin-left: -225px;
+	height: 40px;
+	padding: 0 20px;
+	font-size: 25px;
+	border: 0;
+	color: #333333;
+	border-radius: 5px 0 0 5px;
+}
+
+.head button {
+	position: absolute;
+	left: 50%;
+	margin: 28.5px 0;
+	margin-left: 215px;
+	width: 50px;
+	height: 43px;
+	font-size: 20px;
+	color: #ffffff;
+	border: 0;
+	background-color: #252526;
+	border-radius: 0 5px 5px 0;
+}
+
+.head button:hover {
+	background-color: #1E1E1E;
+}
+
+
+/* head ending */
+
+/* doing-head */
+.doing-head {
+	height: 70px;
+}
+
+.doing-head h4 {
+	float: left;
+	height: 79px;
+	line-height: 90px;
+	font-size: 35px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.doing-head p {
+	float: right;
+	margin: 25px;
+	width: 40px;
+	height: 40px;
+	color: #ffffff;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #333333;
+	border-radius: 20px;
+}
+
+/* doing-head ending */
+
+/* doing */
+.doing ul li {
+	position: relative;
+	width: 1200px;
+	height: 60px;
+	margin: 20px 0;
+	color: #333333;
+	border-radius: 5px 10px 10px 5px;
+	background-color: #F4F5F7;
+}
+
+.doing ul li a {
+	float: left;
+	height: 40px;
+	margin: 10px 25px 10px;
+	color: #333333;
+	text-decoration: none;
+	font-size: 26px;
+	line-height: 40px;
+}
+
+.doing ul li a:hover {
+	background-color: rgb(143, 143, 143);
+	color: #fff;
+}
+
+.doing ul li input {
+	position: absolute;
+	left: 10px;
+	height: 40px;
+	width: 500px;
+	margin: 10px;
+	border: 0;
+	font-size: 26px;
+	line-height: 40px;
+	font-style: italic;
+	background-color: #F4F5F7;
+}
+
+.doing ul li button {
+	float: right;
+	width: 60px;
+	height: 60px;
+	font-size: 20px;
+	color: #ffffff;
+	border-radius: 0 5px 5px 0;
+	border: 0px;
+	background-color: #323233;
+}
+
+.doing ul li button:hover {
+	background-color: #1E1E1E;
+}
+
+/* doing ending */
+
+/* done-head */
+.done-head {
+	height: 70px;
+}
+
+.done-head h4 {
+	float: left;
+	height: 79px;
+	line-height: 90px;
+	font-size: 35px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #fff;
+	color: #fff;
+}
+
+.done-head p {
+	float: right;
+	margin: 25px;
+	width: 40px;
+	height: 40px;
+	color: #ffffff;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #333333;
+	border-radius: 20px;
+}
+
+/* done-head ending */
+
+
+/* done */
+.done ul li {
+	width: 1200px;
+	height: 60px;
+	margin: 20px 0;
+	background-color: #fff;
+	color: #333333;
+	border-radius: 8px;
+}
+
+.done ul li a {
+	color: #333333;
+	padding-left: 25px;
+	font-size: 26px;
+	line-height: 60px;
+	text-decoration: line-through;
+}
+
+
+/* done ending */
