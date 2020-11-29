@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ZH-CN">
+
+<head>
+    <script></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODOlist</title>
+    <link rel="stylesheet" href="todolist.css">
+</head>
+
+<body>
+    <nav>
+        <section>
+            <label for="add_list">My todolist</label>
+            <input type="text" id="add_list" name="add_list" placeholder="添加todo" οnfοcus="this.placeholder=''"
+                οnblur="this.placeholder='添加todo'" required=required>
+            <!-- 是否能在移入输入框后取消holdplace? -->
+        </section>
+    </nav>
+    <div class=" content">
+        <h2>待完成<span id="todocount"></span></h2>
+        <ol id="todolist"></ol>
+        <h2>已完成<span id="donecount"></span></h2>
+        <ol id="donelist"></ol>
+    </div>
+    <script src="todolist.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  background-color: rgb(205, 205, 205);
+}
+nav {
+  height: 50px;
+  background-color: rgb(86, 196, 205);
+}
+nav section {
+  margin: 0 auto;
+  width: 40%;
+}
+
+nav section label {
+  float: left;
+  line-height: 50px;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#add_list {
+  float: right;
+  margin-top: 11px;
+  width: 70%;
+  height: 24px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+h2 {
+  position: relative;
+}
+h2 span {
+  position: absolute;
+  top: 1px;
+  right: 5px;
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%; /*创建圆形标记*/
+  line-height: 23px;
+  font-size: 18px;
+  text-align: center;
+  background: rgb(230, 230, 250);
+}
+.content {
+  width: 40%;
+  margin: 0 auto;
+}
+
+li {
+  position: relative;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 0 10px;
+  height: 32px;
+  box-shadow: 0 1px 0 black;
+  line-height: 32px;
+  background-color: burlywood;
+  list-style: none;
+}
+
+ol li input {
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+p {
+  margin: 0;
+}
+ol li p {
+  display: inline;
+  margin-left: 35px;
+}
+
+ol li p input {
+  top: 5px;
+  margin-left: 35px;
+  width: 70%;
+  height: 14px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+ol li a {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  display: inline-block;
+  border: 1px;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  font-size: 32px;
+  line-height: 10px;
+  color: red;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: gray;
+}
