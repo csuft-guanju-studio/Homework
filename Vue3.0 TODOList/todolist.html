@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ToDoList</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+	<div id="TODOList">
+		<div class="head">
+			<div class="title">
+				<h3>ToDoList</h3>
+				<!-- 输入框和添加按钮 -->
+				<input type="text" class="creat-new-list" id="newList" placeholder="Add New ToDo" v-model="NewTODOData"
+					@keydown="clickEnterInInput">
+				<button id="add" @click="ClickAddButton">&gt;</button>
+			</div>
+		</div>
+		<div class="background-img">
+			<h1>百尺竿头 更进一步</h1>
+		</div>
+
+		<div class="nav">
+			<a href="#doingHead"><img src="images/go.png"></a>
+		</div>
+
+		<div class="doing-head w" id="doingHead">
+			<h4>Now Doing</h4>
+			<!-- 统计正在进行的日程数量 -->
+			<p id="DoingNumber">{{doingNumber}}</p>
+		</div>
+		<div class="doing w clearfix">
+			<ul id="doing">
+				<!-- doing-list 正在进行日程列表 -->
+				<!-- 
+					v-for 传入主应用中的正在进行的日程列表数组,获得数组的值和索引并用v-bind进行绑定
+					v-bind:key="index"增加vue的性能
+					@finish-doing-todo 是子组件doing-list 调用父组件的方法实现完成日程功能
+					@change-doing-todo 是子组件doing-list 调用父组件的方法实现修改日程数据的功能
+				 -->
+				<doing-list v-for="(value,index) in doingList" :key="index" :value="value" :index="index"
+					@finish-doing-todo="finishDoingTODO" @change-doing-todo="changeDoingTODO" />
+			</ul>
+		</div>
+		<div class="done-head w" id="doneHead">
+			<h4>Done</h4>
+			<!-- 统计已经完成的日程数量 -->
+			<p id="DoneNumber">{{doneNumber}}</p>
+		</div>
+		<div class="done w clearfix">
+			<ul id="done">
+				<!-- done-list 已完成列表 -->
+				<!-- 
+					v-for 传入主应用中的正在进行的日程列表数组,获得数组的值和索引并用v-bind进行绑定
+					v-bind:key="index"增加vue的性能
+					@delete-done-todo 是子组件done-list 调用父组件的方法实现删除该日程的功能
+				 -->
+				<done-list v-for="(value,index) in doneList" :key="index" :value="value" :index="index"
+					@delete-done-todo="deleteDoneTODO" />
+
+			</ul>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>
