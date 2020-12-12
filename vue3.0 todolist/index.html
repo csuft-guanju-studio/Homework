@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" type="text/css" href="./css/ToDoList.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id = 'todolist'>
+        <div class="head">
+            <div   class="clude clearfix">
+                <a href="javascript:;">ToDoList</a>
+                <input v-model="Data" type="text" @blur='blurInput' @keydown='keyDownEnter' @click='clickInput'/>
+            </div>
+        </div>
+        <div class="doing">
+            <div class="clude clearfix">
+                <h2>
+                    正在进行
+                    <span class="doingNumber">{{doingNumber}}</span>
+                </h2>                
+                <ul class="doingUl clearfix">
+                <!--
+                    通过v-for循环渲染数组中的数据
+                    :key=‘index’  增加vue的性能
+                    通过绑定index和value对内容进行操作
+                    @push-ending是调用父组件中的pushEnding方法  将已经完成的任务放入endingApp组件中去
+                -->
+                    <doing-app v-for="(value,index) in doingList" :key="index" :value="value" :index="index"
+                    @delete-doing="deleteDoing" @change-doing-or-ending='changeDoingOrEnding'/>
+                </ul>
+            </div>
+        </div>
+        <div class="ending">
+            <div class="clude clearfix">
+                <h2>
+                    已经完成
+                    <span class="endingNumber">{{endingNumber}}</span>
+                </h2>
+                <ul class="endingUl clearfix">
+                    <ending-app v-for='(value,index) in endingList' :key='index' :value='value' :index='index'
+                    @change-doing-or-ending='changeDoingOrEnding'
+                    @delete-ending='deleteEnding'>
+                </ul>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
